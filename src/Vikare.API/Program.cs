@@ -22,6 +22,14 @@ builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>()
 builder.Logging.ClearProviders();
 builder.Host.UseSerilog((context, config) => config.ReadFrom.Configuration(context.Configuration));
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "corsPolicy", builder =>
+    {
+        builder.AllowAnyOrigin().AllowAnyHeader().WithMethods("GET");
+    });
+});
+
 // Build the app
 var app = builder.Build();
 
@@ -35,6 +43,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseIpRateLimiting();
 app.UseSerilogRequestLogging();
+app.UseCors("corsPolicy");
 
 if (!app.Environment.IsDevelopment())
 {
@@ -87,4 +96,16 @@ app.Map("/api/error", () =>
     return Results.Problem();
 });
 
-app.Run();
+try
+{
+    Log.Information("Starting web host");
+    app.Run();
+}
+catch (Exception e)
+{
+    Log.Fatal(e, "Host terminated unexpectedly");
+}
+finally
+{
+    Log.CloseAndFlush();
+}
