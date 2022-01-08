@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "644515be-b4db-45b2-80d3-8a8f8d99fa8a",
+		"name": "Vikare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all airports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7144/api/airports?page=60&pageSize=5&search=russia",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7144",
+					"path": [
+						"api",
+						"airports"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "60"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						},
+						{
+							"key": "search",
+							"value": "russia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get closest airports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7144/api/airports/closest?lat=-34.81557692254923&lng=-58.532264209715024&count=3&unit=k",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7144",
+					"path": [
+						"api",
+						"airports",
+						"closest"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "-34.81557692254923"
+						},
+						{
+							"key": "lng",
+							"value": "-58.532264209715024"
+						},
+						{
+							"key": "count",
+							"value": "3"
+						},
+						{
+							"key": "unit",
+							"value": "k"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get farthest airports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7144/api/airports/farthest?lat=-34.81557692254923&lng=-58.532264209715024&count=3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7144",
+					"path": [
+						"api",
+						"airports",
+						"farthest"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "-34.81557692254923"
+						},
+						{
+							"key": "lng",
+							"value": "-58.532264209715024"
+						},
+						{
+							"key": "count",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7144/api/airports/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7144",
+					"path": [
+						"api",
+						"airports",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
