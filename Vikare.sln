@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BACC1582-576B-4EC4-BD71-D67AE82AC450}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vikare.API", "src\Vikare.API\Vikare.API.csproj", "{A954B9B0-8D60-453B-BAA1-1F9E11D450E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{676BAC23-F98B-4D8A-8231-C57BB7C1356C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vikare.Tests", "tests\Vikare.Tests\Vikare.Tests.csproj", "{24E6B4B7-8E05-492B-A180-3F6F0919B4C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A954B9B0-8D60-453B-BAA1-1F9E11D450E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A954B9B0-8D60-453B-BAA1-1F9E11D450E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A954B9B0-8D60-453B-BAA1-1F9E11D450E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A954B9B0-8D60-453B-BAA1-1F9E11D450E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24E6B4B7-8E05-492B-A180-3F6F0919B4C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24E6B4B7-8E05-492B-A180-3F6F0919B4C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24E6B4B7-8E05-492B-A180-3F6F0919B4C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24E6B4B7-8E05-492B-A180-3F6F0919B4C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A954B9B0-8D60-453B-BAA1-1F9E11D450E2} = {BACC1582-576B-4EC4-BD71-D67AE82AC450}
+		{24E6B4B7-8E05-492B-A180-3F6F0919B4C0} = {676BAC23-F98B-4D8A-8231-C57BB7C1356C}
+	EndGlobalSection
+EndGlobal
